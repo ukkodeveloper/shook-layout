@@ -17,34 +17,32 @@ $npm install shook-layout
 ## 사용
 
 ```tsx
-import Flex from 'shook-layout'
+import Flex from 'shook-layout';
 
 const MyComponent = () => {
-
-	return (
-		<Flex $direction="column" $gap={10}>
+  return (
+    <Flex $direction="column" $gap={10}>
       <Item />
       <Item />
-			<Item />
-    </SongPlayerFlex>
-	);
+      <Item />
+    </Flex>
+  );
 };
 ```
 
 다음과 같이 `Flex` 컴포넌트의 props로 flex 속성을 넣을 수 있습니다.
 
 ```tsx
-import Flex from 'shook-layout'
+import Flex from 'shook-layout';
 
 const MyComponent = () => {
-
-	return (
-		<Flex $gap={4} $direction="row" $md={{ $direction: 'column' $gap={10} }}>
-		  <item />
-		  <item />
-		  <item />
-		</Flex>;
-	);
+  return (
+    <Flex $gap={4} $direction="row" $md={{ $direction: 'column', $gap = 10 }}>
+      <Item />
+      <Item />
+      <Item />
+    </Flex>
+  );
 };
 ```
 
@@ -55,7 +53,7 @@ const MyComponent = () => {
 ### flex 속성
 
 | props                 | 타입       | 기본값                | 설명                  |
-| --------------------- | ---------- | --------------------- | --------------------- | ------------ | ----------------------------- | ----------------------- | ------------------------- |
+| --------------------- | ---------- | --------------------- | --------------------- | 
 | $direction (optional) | "column"   | "column-reverse"      | "row"                 | "row-reverse | row                           | 아이템의 배치 방향 설정 |
 | $align (optional)     | Globals    | DataType.SelfPosition | "baseline"            | "normal"     | "stretch"                     | stretch                 | 아이템을 교차 축에서 정렬 |
 | $justify (optional)   | "baseline" | "normal"              | "stretch"             | flex-start   | 아이템을 주 축에서 정렬       |
